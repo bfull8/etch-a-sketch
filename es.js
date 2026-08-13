@@ -15,7 +15,15 @@ for (let i = 0; i < 16 * 16; i++) {
 // Prompt user how large the grid should be
 const gridSizeBtn = document.querySelector("#grid-size-btn");
 gridSizeBtn.addEventListener("click", () => {
-  let gridSize = prompt("How many squares in each row/column would you like?");
+  let gridSize;
+  while (true) {
+    gridSize = prompt("How many squares in each row/column would you like?");
+    if (gridSize < 1 || gridSize > 100) {
+      continue;
+    } else {
+      break;
+    }
+  }
 
   // Reset the grid
   container.innerHTML = "";
