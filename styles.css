@@ -7,6 +7,18 @@
 
 .square {
   box-sizing: border-box;
-  flex: 1 1 calc(100% / 16);
   aspect-ratio: 1;
+}
+
+#grid-size-btn {
+  background-color: #f2d986;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  margin: 5px 0px;
 }
