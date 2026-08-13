@@ -1,3 +1,7 @@
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function createGrid(gridSize) {
   container.innerHTML = "";
 
@@ -7,7 +11,7 @@ function createGrid(gridSize) {
     square.style.flex = `1 1 calc(100% / ${gridSize})`;
 
     square.addEventListener("mouseenter", () => {
-      square.style.backgroundColor = "green";
+      square.style.backgroundColor = `rgb(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)})`;
     });
 
     container.appendChild(square);
@@ -31,3 +35,5 @@ gridSizeBtn.addEventListener("click", () => {
   }
   createGrid(gridSize);
 });
+
+//rgb(255,1,0)
