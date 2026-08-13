@@ -8,6 +8,7 @@
 .square {
   box-sizing: border-box;
   aspect-ratio: 1;
+  opacity: 0;
 }
 
 #grid-size-btn {

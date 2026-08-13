@@ -12,6 +12,10 @@ function createGrid(gridSize) {
 
     square.addEventListener("mouseenter", () => {
       square.style.backgroundColor = `rgb(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)})`;
+      let currentOpacity = Number(window.getComputedStyle(square).opacity);
+      if (currentOpacity < 1) {
+        square.style.opacity = currentOpacity + 0.1;
+      }
     });
 
     container.appendChild(square);
